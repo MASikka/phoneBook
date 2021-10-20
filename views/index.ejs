@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+    <script src="https://kit.fontawesome.com/0d278e64bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1><i class="fas fa-phone"></i> Phonebook</h1>
+    </div>
+
+    <div class="box">
+        <% for(let i = 0; i < myContacts.length; i++) { %>
+            <form action="/delete" method="POST">
+                <div class="item">
+                    <p><%= myContacts[i].name %> <%= myContacts[i].phone %></p>
+                    <input type="hidden" name="hidden" value="<%= myContacts[i].phone %>">
+                    <button type="submit" value="<%= myContacts[i].name %>" name="checkbox"><i class="fas fa-user-slash"></i></button>
+                    
+                    
+                </div>
+            </form>
+            
+        <% } %>    
+
+        
+
+        <form action="/" class="class" method="POST">
+            <input type="text" name="newName" placeholder="Add New Name">
+            
+            <input type="text" name="newNumber" placeholder="Add New Number">
+            <button type="submit"><i class="fas fa-user-plus"></i></button>
+        </form>
+    </div>
+    
+    <footer>
+        <span>M.A. Sikka &#169; 2021</span>
+    </footer>
+</body>
+</html>
