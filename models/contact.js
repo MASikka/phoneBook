@@ -22,7 +22,7 @@ module.exports = class Contact {
             contacts.push(this);
 
             fs.writeFile(pathToFile, JSON.stringify(contacts), (error) => {
-                console.log('Error', error);
+                if(error){console.log('Error', error);}
             });
 
         });
@@ -51,7 +51,7 @@ module.exports = class Contact {
                 }
             }
             fs.writeFile(pathToFile, JSON.stringify(contacts), (error) => {
-                console.log(error);
+                if(error){console.log(error);}
             });
 
         });

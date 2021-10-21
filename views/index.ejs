@@ -19,8 +19,7 @@
                 <div class="item">
                     <p><%= myContacts[i].name %> <%= myContacts[i].phone %></p>
                     <input type="hidden" name="hidden" value="<%= myContacts[i].phone %>">
-                    <button type="submit" value="<%= myContacts[i].name %>" name="checkbox"><i class="fas fa-user-slash"></i></button>
-                    
+                    <button type="submit" id="deleteButton" value="<%= myContacts[i].name %>" name="checkbox"><i class="fas fa-user-minus"></i></button>
                     
                 </div>
             </form>
